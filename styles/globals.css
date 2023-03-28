@@ -3,10 +3,30 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Satoshi-Variable";
-  src: url("../public/font/Satoshi-Variable.ttf");
+  font-family: "ColfaxAIBold";
+  src: url("../public/fonts/ColfaxAIBold.otf");
+}
+@font-face {
+  font-family: "ColfaxAIRegular";
+  src: url("../public/fonts/ColfaxAIRegular.otf");
+}
+
+body{
+  background-color: #FAFBFD;
 }
 
 * {
-  font-family: "Satoshi-Variable";
+  font-family: "ColfaxAIRegular", Helvetica, sans-serif;
+}
+
+.font-regular {
+  font-family: "ColfaxAIRegular", Helvetica, sans-serif;
+}
+.font-bold {
+  font-family: "ColfaxAIBold", Helvetica, sans-serif;
+}
+
+/* disable the resizable property of a textarea */
+textarea {
+  resize: none;
 }
