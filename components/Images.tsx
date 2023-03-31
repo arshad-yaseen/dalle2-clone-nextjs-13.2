@@ -31,6 +31,384 @@ function Images() {
           </h1>
         </div>
       </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
+      <div className=" relative">
+        <Image
+          src={image.url}
+          alt={image.name}
+          width={800}
+          height={800}
+          className="hover:opacity-10 curs transition-opacity cursor-pointer duration-300 z-50 relative"
+        />
+        <div className="absolute top-0 left-0 w-full h-full flex flex-col p-5 z-10">
+          <h1 className="font-regular">
+            3D render of a cute tropical fish in an aquarium on a dark blue
+            background, digital art
+          </h1>
+          <h1 className="font-regular absolute bottom-5 text-[#939292]">
+            Click to try
+          </h1>
+        </div>
+      </div>
     </div>
   );
 }
