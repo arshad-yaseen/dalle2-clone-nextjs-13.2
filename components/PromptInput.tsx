@@ -1,14 +1,29 @@
 "use client";
 
-import { generateSuggession } from "@/lib/openaihelpers";
-import { useState } from "react";
+import { generateImage, generateSuggession } from "@/lib/openaihelpers";
+import { useEffect, useState } from "react";
+import Cookies from "js-cookie";
+import { imagesAtom } from "@/atoms/image";
+import { useRecoilState } from "recoil";
 
 function PromptInput() {
   let [prompt, setPrompt] = useState("");
+  const [imagesGlobalState, setImagesGlobalState] =
+    useRecoilState<string[]>(imagesAtom);
+
+  useEffect(() => {
+    let cookie = Cookies.get("images");
+    const separator = ",";
+    let cookieImages = cookie ? cookie.split(separator) : [];
+    setImagesGlobalState(cookieImages);
+  },[]);
 
   const handleInputChange = (e: any) => {
     setPrompt(e.target.value);
-    const valueLength = e.target.value.length;
+  };
+
+  useEffect(() => {
+    const valueLength = prompt.length;
     const generateButton = document.getElementById("generate-button");
     const mobileButton1 = document.getElementById("mobile-generate-button-1");
     const mobileButton2 = document.getElementById("mobile-generate-button-2");
@@ -25,7 +40,7 @@ function PromptInput() {
       mobileButton2?.classList.replace("flex", "hidden");
       mobileButton1?.classList.replace("hidden", "flex");
     }
-  };
+  }, [prompt]);
 
   const surpriseMeHandler = async () => {
     let prompt_input = document.getElementById("prompt-input");
@@ -39,6 +54,22 @@ function PromptInput() {
     setPrompt("");
     setPrompt(suggestion!);
   };
+
+  const handleFormSubmit = async (e: any) => {
+    e.preventDefault();
+    let image = await generateImage(prompt);
+    let cookie = Cookies.get("images");
+    const separator = ",";
+    let cookieImages = cookie ? cookie.split(separator) : [];
+    if (image) {
+      setImagesGlobalState([image,...cookieImages]);
+      Cookies.set("images", [image,...cookieImages].join(separator));
+    } else {
+      console.log("Image URL is undefined");
+    }
+  };
+
+
 
   return (
     <div className="w-full h-[65vh] flex flex-col items-center justify-center md:px-28 px-6">
@@ -56,7 +87,10 @@ function PromptInput() {
       </div>
 
       <div className="sticky top-16  z-50 w-full md:h-[4.3rem] h-[14rem]">
-        <form className="h-full w-full    relative flex items-center py-3">
+        <form
+          onSubmit={(e) => handleFormSubmit(e)}
+          className="h-full w-full    relative flex items-center py-3"
+        >
           <div className="w-full relative flex md:h-auto  h-full">
             <textarea
               value={prompt}
@@ -68,6 +102,7 @@ function PromptInput() {
             />
             <button
               disabled={!prompt}
+              type="submit"
               id="generate-button"
               className="absolute right-0 bg-white  transition-colors md:flex hidden duration-300 px-4 items-center h-full rounded-r-md text-[0.900rem] font-bold text-[#7E7F7E] border-l border-l-[#F3F3F2]"
             >
@@ -82,6 +117,7 @@ function PromptInput() {
             </button>
             <button
               id="mobile-generate-button-2"
+              type="submit"
               className=" absolute bottom-0 left-0 w-full md:hidden hidden items-center justify-center transition-colors duration-300 px-4  h-16  rounded-b-md  text-[1rem] font-bold text-black border-t border-t-[#F3F3F2]"
             >
               Generate

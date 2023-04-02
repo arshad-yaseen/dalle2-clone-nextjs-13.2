@@ -1,5 +1,4 @@
-import Header from "@/components/Header";
-import PromptInput from "@/components/PromptInput";
+
 import "../styles/globals.css";
 
 export const metadata = {
@@ -64,15 +63,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {/* Header */}
-        <Header />
-
-        {/* Prompt Input */}
-        <PromptInput />
-
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
