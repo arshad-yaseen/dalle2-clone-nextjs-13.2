@@ -53,6 +53,7 @@ function Images() {
             src={image}
             onLoad={() => {
               setLoading(false);
+              setLoadingGlobalState(false);
             }}
             priority={true}
             alt={`Generated image ${index + 1}`}
