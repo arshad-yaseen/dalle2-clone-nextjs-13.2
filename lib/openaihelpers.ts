@@ -7,6 +7,7 @@ const generateSuggession = async () => {
     max_tokens: 50,
     temperature: 0.9,
     model: "text-davinci-003",
+    
   })
 
   const responseText = response.data.choices[0].text?.trim();

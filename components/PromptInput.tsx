@@ -3,20 +3,23 @@
 import { generateImage, generateSuggession } from "@/lib/openaihelpers";
 import { useEffect, useState } from "react";
 import Cookies from "js-cookie";
-import { imagesAtom } from "@/atoms/image";
+import { imagesAtom, loadingAtom } from "@/atoms/atom";
 import { useRecoilState } from "recoil";
+import { toast } from "sonner";
 
 function PromptInput() {
   let [prompt, setPrompt] = useState("");
   const [imagesGlobalState, setImagesGlobalState] =
     useRecoilState<string[]>(imagesAtom);
+  const [loadingGlobalState, setLoadingGlobalState] =
+    useRecoilState<boolean>(loadingAtom);
 
   useEffect(() => {
     let cookie = Cookies.get("images");
     const separator = ",";
     let cookieImages = cookie ? cookie.split(separator) : [];
     setImagesGlobalState(cookieImages);
-  },[]);
+  }, []);
 
   const handleInputChange = (e: any) => {
     setPrompt(e.target.value);
@@ -43,6 +46,10 @@ function PromptInput() {
   }, [prompt]);
 
   const surpriseMeHandler = async () => {
+    if (Cookies.get("limitreached") === "true") {
+      toast.error("You have reached the limit of 2 images");
+      return;
+    }
     let prompt_input = document.getElementById("prompt-input");
     prompt_input?.setAttribute("placeholder", "Generating…");
 
@@ -57,19 +64,27 @@ function PromptInput() {
 
   const handleFormSubmit = async (e: any) => {
     e.preventDefault();
+    if (Cookies.get("limitreached") === "true") {
+      toast.error("You have reached the limit of 2 images");
+      return;
+    }
+    setLoadingGlobalState(true);
     let image = await generateImage(prompt);
     let cookie = Cookies.get("images");
     const separator = ",";
     let cookieImages = cookie ? cookie.split(separator) : [];
     if (image) {
-      setImagesGlobalState([image,...cookieImages]);
-      Cookies.set("images", [image,...cookieImages].join(separator));
+      setImagesGlobalState([image, ...cookieImages]);
+      Cookies.set("images", [image, ...cookieImages].join(separator));
+
     } else {
       console.log("Image URL is undefined");
     }
+
+    if ([image, ...cookieImages].length > 1) {
+      Cookies.set("limitreached", "true");
+    }
   };
-
-
 
   return (
     <div className="w-full h-[65vh] flex flex-col items-center justify-center md:px-28 px-6">
@@ -86,7 +101,7 @@ function PromptInput() {
         </button>
       </div>
 
-      <div className="sticky top-16  z-50 w-full md:h-[4.3rem] h-[14rem]">
+      <div className="md:sticky top-16  z-50 w-full md:h-[4.3rem] h-[14rem]">
         <form
           onSubmit={(e) => handleFormSubmit(e)}
           className="h-full w-full    relative flex items-center py-3"
@@ -98,7 +113,7 @@ function PromptInput() {
               name="prompt"
               id="prompt-input"
               placeholder="An Impressionist oil painting of sunflowers in a purple vase…"
-              className="w-full h-full  md:placeholder:text-sm placeholder:text-md placeholder:leading-[1.7] outline-none placeholder:font-light leading-[100%] md:pt-5 duration-300 pt-5 md:pl-4 px-4 rounded-md border border-[#f5f6f8]  placeholder:text-[#BBBABA] transition-shadow shadow-md focus:shadow-lg shadow-[#e3e5e9]"
+              className="w-full h-full  md:placeholder:text-sm placeholder:text-md placeholder:leading-snug outline-none placeholder:font-light leading-[100%] md:pt-5 duration-300 pt-5 md:pl-4 px-4 rounded-md border border-[#f5f6f8]  placeholder:text-[#BBBABA] transition-shadow shadow-md focus:shadow-lg shadow-[#e3e5e9]"
             />
             <button
               disabled={!prompt}
@@ -109,6 +124,7 @@ function PromptInput() {
               Generate
             </button>
             <button
+              onClick={surpriseMeHandler}
               type="button"
               id="mobile-generate-button-1"
               className=" absolute bottom-0  left-0 w-full md:hidden flex items-center justify-center transition-colors duration-300 px-4  h-16  rounded-b-md  text-[1rem] font-bold text-black border-t border-t-[#F3F3F2]"
